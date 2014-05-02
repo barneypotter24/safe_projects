@@ -29,9 +29,6 @@ then
     exit 1
 fi
 
-echo ${REPOSITORY_ROOT}
-exit
-
 PROJECT=$1
 
 # Run this command from the project's parent directory.
