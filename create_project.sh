@@ -29,6 +29,9 @@ then
     exit 1
 fi
 
+# Get the current directory for this script.
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 PROJECT=$1
 
 # Run this command from the project's parent directory.
@@ -43,10 +46,13 @@ REPOSITORY_DIR=${REPOSITORY_ROOT}/${PROJECT}
 mkdir -p ${PROJECT}
 cd ${PROJECT}
 git init
-touch README Makefile config.sh
+touch README
+cp ${DIR}/Snakefile_template Snakefile
+cp ${DIR}/config.template.sh config.sh
+cp ${DIR}/config.template.json config.json
 
 # Commit default files.
-git add README Makefile config.sh
+git add README Snakefile config.sh config.json
 git commit -m "initial commit."
 
 # Setup remote repository.
