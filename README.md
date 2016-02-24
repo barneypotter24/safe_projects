@@ -55,3 +55,11 @@ configuration section above).
 ```bash
 git push origin master
 ```
+
+If your current working directory is already a git repository without a remote,
+you can quickly initialize a remote repository and push all your changes there
+by running the following command from the top-level of the working directory.
+
+```bash
+initialize_project.sh
+```
