@@ -17,6 +17,16 @@ An example file looks like this:
 export REPOSITORY_ROOT=/net/eichler/vol4/home/jlhudd/projects/repositories
 ```
 
+Clone safe projects code and add scripts to `$PATH`.
+
+```bash
+mkdir -p ~/src
+cd ~/src
+git clone https://github.com/huddlej/safe_projects.git
+PATH=$PATH:$HOME/src/safe_projects
+export PATH
+```
+
 ## Usage
 
 Create a new project.
